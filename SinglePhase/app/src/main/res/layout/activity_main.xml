@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#26C6DA"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/spoothi"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:text="She is My Spoothi"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:background="#FFEE58"
+        android:textSize="24sp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:text="She is My World!"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:background="#fff176"
+        android:textSize="24sp"
+        android:padding="10dp"/>
+
+</LinearLayout>

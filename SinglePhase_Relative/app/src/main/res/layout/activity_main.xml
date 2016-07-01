@@ -1,0 +1,122 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/spoothi" />
+
+    <TextView
+        android:id="@+id/pebble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image"
+        android:text="Pebble Beach"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/cali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pebble"
+        android:layout_toRightOf="@id/image"
+        android:text="California"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/dist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cali"
+        android:layout_toRightOf="@id/image"
+        android:text="10 miles away"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/lyla_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="24sp"
+        android:text="Lyla" />
+
+    <TextView
+        android:id="@+id/me_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/lyla_text_view"
+        android:textSize="24sp"
+        android:text="Me" />
+
+    <TextView
+        android:id="@+id/natalie_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/lyla_text_view"
+        android:textSize="24sp"
+        android:text="Natalie" />
+
+    <TextView
+        android:id="@+id/jennie_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="24sp"
+        android:text="Jennie" />
+
+    <TextView
+        android:id="@+id/omoju_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/jennie_text_view"
+        android:textSize="24sp"
+        android:text="Omoju" />
+
+    <TextView
+        android:id="@+id/amy_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/omoju_text_view"
+        android:textSize="24sp"
+        android:text="Amy" />
+
+    <TextView
+        android:id="@+id/ben_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:text="Ben" />
+
+    <TextView
+        android:id="@+id/kunal_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/ben_text_view"
+        android:textSize="24sp"
+        android:text="Kunal" />
+
+    <TextView
+        android:id="@+id/kagure_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="24sp"
+        android:text="Kagure" />
+
+
+</RelativeLayout>
