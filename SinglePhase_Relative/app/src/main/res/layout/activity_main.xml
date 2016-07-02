@@ -15,13 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Welcome to Singlephase!"
-        android:textColor="#fff"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-light"
         android:textSize="30dp"
-        android:padding="6dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="16dp"
         android:background="#f45b34"
         android:textAlignment="center"/>
 
@@ -30,12 +28,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="We are the Best"
-        android:textColor="#fff"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_below="@id/text1"
         android:fontFamily="sans-serif-light"
-        android:textSize="15dp"
-        android:padding="6dp"
+        android:textSize="30dp"
+        android:layout_marginTop="16dp"
         android:background="#f45b34"
         android:textAlignment="center"/>
 
