@@ -19,7 +19,7 @@
         android:layout_marginLeft="72dp"
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-light"
-        android:text="Details"
+        android:text="Name &amp; Email"
         android:textAppearance="?android:textAppearanceLarge"
         android:textColor="#90A4AE"
         android:textStyle="bold" />
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="16dp"
             android:layout_marginLeft="80dp"
-            android:paddingRight="10dp"
+            android:paddingRight="20dp"
             android:src="@drawable/loc" />
 
         <TextView
@@ -70,6 +70,31 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
             android:text="office@inspiredmemories.in"
+            android:textColor="#90A4AE" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginLeft="80dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/ph" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:text="(+91) 974 265 3096"
             android:textColor="#90A4AE" />
 
     </LinearLayout>
