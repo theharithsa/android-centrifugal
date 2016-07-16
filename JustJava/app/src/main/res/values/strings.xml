@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">JustJava</string>
+    <string name="EditField_placeholder">Name</string>
+    <string name="Toppings">Toppings</string>
+    <string name="Cream">Whipped Cream</string>
+    <string name="Chocolate">Chocolate</string>
+    <string name="Quantity">QUANTITY</string>
 </resources>

@@ -1,16 +1,18 @@
 package com.example.android.justjava;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-
-import java.text.NumberFormat;
 
 /**
  * This app displays an order form to order coffee.
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Variable Declaration*/
-    int quantity = 0;
+    int quantity = 1;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -42,29 +44,82 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        /*display(quantity);
-        displayPrice(quantity * 5);
-        */
-        int price = quantity * 5;
-        String priceMessage = "Amount Due Rs " + price + ".00 \nThank You";
-        displayMessage(priceMessage);
+
+        //Name Field
+        EditText getName = (EditText) findViewById(R.id.nameField);
+        String setName = getName.getText().toString();
+
+        //Whipped Cream CheckBox
+        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.checkbox);
+        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
+
+        //Chocolate Check Box
+        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_checkbox);
+        boolean hasChocolate = chocolateCheckBox.isChecked();
+
+        int price = calculatePrice(hasWhippedCream, hasChocolate);
+        String priceMessage = orderSummary(price, hasWhippedCream, hasChocolate, setName);
+
+        String addresses = "support@inspiredmemories.in";
+        String subject = "Order Summary";
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:harithsa@inspiredmemories.in")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * @orderSummary returns the summary string
+     */
+    private String orderSummary(int price, boolean haswhippedCream, boolean hasChocolate, String setName){
+        String summary = "Name: " + setName + "\n" + "Whipped Cream - " + haswhippedCream + "\n" + "Chocolate - " + hasChocolate + "\n" + "Quantity: " + quantity + "\n" + "Total: Rs." + price + ".00" + "\n" + "Thank You!!";
+        return summary;
+    }
+
+    /**
+     * @calculatePrice returns the total amount
+     */
+    private int calculatePrice(boolean a, boolean b) {
+        int basePrice = 5;
+        //Condition for WhippedCream Check Box
+        if(a) {
+            basePrice += 1;
+        }
+        //Condition for Chocolate CheckBox
+        if(b){
+            basePrice += 2;
+        }
+
+        int price = quantity * basePrice;
+        return price;
     }
 
     /**
      * Method to Increment the Orders when +button is clicked
      */
     public void Increment(View view) {
-        quantity = quantity + 1;
-        display(quantity);
+        if (quantity <= 100) {
+            quantity = quantity + 1;
+            display(quantity);
+        } else {
+            Toast.makeText(this, "We Can't Prepare More than 100 Coffees at a time", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
      * Method to Decrement the Orders when - Button is clicked
      */
     public void Decrement(View view) {
-        if (quantity > 0) {
+        if (quantity > 1) {
             quantity = quantity - 1;
             display(quantity);
+        } else {
+            Toast.makeText(this, "You Cant Order NUll!!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -77,21 +132,13 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
-
     /*
     * Method to Display Message onto screen
     */
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
-    }
+//    private void displayMessage(String message) {
+//        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary__text_view);
+//        orderSummaryTextView.setText(message);
+//    }
 
 
     @Override

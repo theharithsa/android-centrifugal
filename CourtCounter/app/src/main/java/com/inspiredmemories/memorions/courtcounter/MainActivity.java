@@ -65,9 +65,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Method to Update the Text after getting the conclusion r
+     */
+    private void Conclusion(String teamName){
+        TextView teamWinning = (TextView) findViewById(R.id.scores);
+        teamWinning.setText(String.valueOf(teamName));
+    }
+
+    /**
      * Reset Function
      */
     public void reset(View view){
+        String Result = "";
+        if(scoreTeamA > scoreTeamB){
+            Result = "Team A Wins";
+            Conclusion(Result);
+        }
+        else {
+            Result = "Team B Wins";
+            Conclusion(Result);
+        }
         scoreTeamA = 0;
         scoreTeamB = 0;
         resetMain(scoreTeamA);
