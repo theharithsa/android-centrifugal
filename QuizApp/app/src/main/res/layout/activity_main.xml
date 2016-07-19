@@ -5,12 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5252"
-
     android:fillViewport="false">
-
-    <RelativeLayout android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
 
     <LinearLayout
@@ -29,14 +24,14 @@
             android:text="@string/Heading"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.Holo"
-            android:textColor="#fff"
-            android:textSize="36sp"/>
+            android:textColor="#F44336"
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginBottom="16dp"
-            android:background="#fff" />
+            android:background="#000" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,124 +42,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-light"
                 android:text="1. What is  the Capital City of Portugal?"
-                android:layout_marginBottom="8dp"
-                android:textColor="#fff"
-                />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/newyork_radioButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingRight="8dp"
-                        android:text="New York"
-                        android:fontFamily="sans-serif-light"
-                        android:buttonTint="#fff"
-                        android:textColor="#fff"/>
-
-                    <RadioButton
-                        android:id="@+id/lisbon_radioButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingRight="8dp"
-                        android:text="Lisbon"
-                        android:fontFamily="sans-serif-light"
-                        android:buttonTint="#fff"
-                        android:textColor="#fff"/>
-
-                    <RadioButton
-                        android:id="@+id/stockholm_radioButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingRight="8dp"
-                        android:text="Stockholm"
-                        android:fontFamily="sans-serif-light"
-                        android:buttonTint="#fff"
-                        android:textColor="#fff"/>
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2. Who Founded Microsoft?"
-                android:layout_marginBottom="8dp"
-                android:textColor="#fff"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/bill_gates_chcekBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="#fff"
-                android:text="Bill Gates"
-                android:textColor="#fff"/>
-            <CheckBox
-                android:id="@+id/paul_allen_chcekBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:buttonTint="#fff"
-                android:text="Paul Allen"
-                android:textColor="#fff"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <CheckBox
-                    android:id="@+id/steve_chcekBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:buttonTint="#fff"
-                    android:text="Steve Jobs"
-                    android:textColor="#fff"/>
-                <CheckBox
-                    android:id="@+id/tim_chcekBox"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:buttonTint="#fff"
-                    android:text="Timothy D Cook"
-                    android:textColor="#fff"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3. What is  the Capital City of Portugal?"
-                android:layout_marginBottom="8dp"
-                android:textColor="#fff"
-                />
+                android:textColor="#000" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -176,60 +57,210 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
                     android:paddingRight="8dp"
                     android:text="New York"
-                    android:fontFamily="sans-serif-light"
-                    android:buttonTint="#fff"
-                    android:textColor="#fff"/>
+                    android:textColor="#000" />
 
                 <RadioButton
                     android:id="@+id/lisbon_radioButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
                     android:paddingRight="8dp"
                     android:text="Lisbon"
-                    android:fontFamily="sans-serif-light"
-                    android:buttonTint="#fff"
-                    android:textColor="#fff"/>
+                    android:textColor="#000" />
 
                 <RadioButton
                     android:id="@+id/stockholm_radioButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingRight="8dp"
-                    android:text="Stockholm"
+
                     android:fontFamily="sans-serif-light"
-                    android:buttonTint="#fff"
-                    android:textColor="#fff"/>
+                    android:text="Stockholm"
+                    android:textColor="#000" />
             </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="2. Who Founded Microsoft?"
+                android:textColor="#000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/bill_gates_chcekBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Bill Gates"
+                    android:textColor="#000" />
+
+                <CheckBox
+                    android:id="@+id/paul_allen_chcekBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Paul Allen"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/steve_chcekBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Steve Jobs"
+                    android:textColor="#000" />
+
+                <CheckBox
+                    android:id="@+id/tim_chcekBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Timothy D Cook"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="3. Which is the Longest River??"
+                android:textColor="#000" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/nile_radioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Nile"
+                    android:textColor="#000" />
+
+                <RadioButton
+                    android:id="@+id/yangtze_radioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Yangtze"
+                    android:textColor="#000" />
+
+                <RadioButton
+                    android:id="@+id/amazon_radioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Amazon"
+                    android:textColor="#000" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="4. Write the Name of Android's First OS Version after Beta"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/os_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="false"
+                android:hint="Name"
+                android:inputType="textCapWords" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/final_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="56sp"
+            android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-light"
-            android:textColor="#fff"
-            android:layout_gravity="center_horizontal"/>
+            android:paddingBottom="16dp"
+            android:textColor="#000"
+            android:textSize="56sp"
+            android:visibility="gone" />
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Result"
-            android:layout_gravity="center_horizontal"
-            android:onClick="finalCall"
-            android:background="#F44336"
-            android:textColor="#fff"
-            android:fontFamily="sans-serif"/>
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mail_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="#F44336"
+                android:fontFamily="sans-serif"
+                android:onClick="mailFinalCall"
+                android:text="Mail Result"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="#F44336"
+                android:fontFamily="sans-serif"
+                android:onClick="finalCall"
+                android:text="Result"
+                android:textColor="#fff" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
-
-
-    </RelativeLayout>
 </ScrollView>
